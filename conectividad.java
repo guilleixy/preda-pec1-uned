@@ -26,6 +26,19 @@ public class conectividad
 
             Graph graph = new Graph(n, y);
             
+            line = reader.readLine();
+            
+            while(line != null){
+                parts = line.split("\\s+");
+                if(parts.length != 3) {
+                    throw new IllegalArgumentException (
+                        "Missing argument for node in text input."
+                    );
+                }
+                graph.addEdge(Integer.parseInt(parts[0]) - 1, Integer.parseInt(parts[1]) - 1, Integer.parseInt(parts[2]));
+                line = reader.readLine();
+            }
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
