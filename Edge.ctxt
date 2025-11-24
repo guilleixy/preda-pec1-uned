@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Edge
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Edge\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=originNode\ targetNode\ weight
+comment1.target=Edge(int,\ int,\ int)
+comment2.params=
+comment2.target=int\ getOriginNode()
+comment3.params=
+comment3.target=int\ getTargetNode()
+comment4.params=
+comment4.target=int\ getWeight()
+numComments=5

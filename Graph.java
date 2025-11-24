@@ -17,7 +17,6 @@ public class Graph
         this.n = n;
         this.y = y;
         adjacent = new ArrayList<>();
-        
         for(int i = 0; i < n; i++){
             adjacent.add(new ArrayList<>());      
         }   
