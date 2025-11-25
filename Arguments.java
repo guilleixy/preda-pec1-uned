@@ -4,8 +4,8 @@ import java.io.File;
 /**
  * Write a description of class Arguments here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Guillermo Bernal Lou
+ * @version 25/11/2025
  */
 public class Arguments
 {

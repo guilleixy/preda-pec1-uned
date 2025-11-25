@@ -3,8 +3,8 @@ import java.util.List;
 /**
  * Write a description of class MinimumSpanningTree here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Guillermo Bernal Lou
+ * @version 25/11/2025
  */
 public class MinimumSpanningTree
 {

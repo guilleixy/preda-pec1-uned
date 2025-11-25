@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Arguments
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Arguments\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Arguments\ here.\r\n\ \r\n\ @author\ Guillermo\ Bernal\ Lou\r\n\ @version\ 25/11/2025\r\n
 comment1.params=args
 comment1.target=Arguments(java.lang.String[])
 comment2.params=args
