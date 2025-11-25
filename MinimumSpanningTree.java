@@ -8,11 +8,19 @@ import java.util.List;
  */
 public class MinimumSpanningTree
 {
-    public final List<Edge> edges;
-    public final int cost;
+    private List<Edge> edges;
+    private int cost;
 
     public MinimumSpanningTree(List<Edge> edges, int cost) {
         this.edges = edges;
         this.cost = cost;
+    }
+    
+    public List<Edge> getEdges(){
+        return edges;
+    }
+    
+    public int getCost(){
+        return cost;
     }
 }

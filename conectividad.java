@@ -1,6 +1,9 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.util.List;
 
 /**
  * Write a description of class Main here.
@@ -39,11 +42,26 @@ public class conectividad
                 line = reader.readLine();
             }
             
+            Prim primSolver = new Prim();
+            MinimumSpanningTree mst = primSolver.calculateMSTree(graph, config.isTraceEnabled(), y);
+                    
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(config.getOutputFile()))) {
+                
+                bw.write(Integer.toString(mst.getCost()));
+                bw.newLine();
+    
+                for (Edge e : mst.getEdges()) {
+                    bw.write((e.getOriginNode() + 1) + " " + (e.getTargetNode() + 1) + " " + e.getWeight());
+                    bw.newLine();
+                }
+    
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //TODO: Move FileRead to separate file?
         
-        //createTree(trace);
     }
 }

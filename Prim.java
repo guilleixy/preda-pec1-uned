@@ -36,7 +36,8 @@ public class Prim
             visited[bestEdge.getTargetNode()] = true;
 
             if (trace) {
-                System.out.println("Añadida arista: " + bestEdge);
+                System.out.println("Añadida arista: " + bestEdge.getOriginNode() + " -> "
+                                   + bestEdge.getTargetNode() + " (" + bestEdge.getWeight() + ")");
             }
         }
         return new MinimumSpanningTree(mst, totalCost);
