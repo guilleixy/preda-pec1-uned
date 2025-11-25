@@ -2,7 +2,12 @@
 import java.io.File;
 
 /**
- * Write a description of class Arguments here.
+ * Parses and validates command-line arguments
+ * 
+ * Expected usage:
+ *   conectividad [-t] [-h] [inputFile] [outputFile]
+ *   
+ * If outputFile is omitted, a default file is used.
  * 
  * @author Guillermo Bernal Lou
  * @version 25/11/2025
@@ -19,22 +24,40 @@ public class Arguments
         validateArguments();
     }
     
+    /**
+     * Parses the arguments and assigns values to the corresponding fields.
+     * -t enables trace mode
+     * -h enables help mode
+     * The first non-flag argument is the input file, the second is the output file.
+     * @param args Array of command-line arguments
+     */
     private void parseArguments(String[] args) {
         for(int i = 0; i < args.length; i++){
-            if (args[i].equals("-t")) {
-                trace = true; 
-            } else if (args[i].equals("-h")) {
-                help = true;
-                return;
-            } else if(inputFile == null) {
-                inputFile = args[i];
-            } else {
-                outputFile = args[i];
+            switch (args[i]) {
+                case "-t" -> trace = true;
+                case "-h" -> {
+                    help = true;
+                    return;
+                }
+                default -> {
+                    if (args[i].startsWith("-")) {
+                        throw new IllegalArgumentException("Unknown option: " + args[i]);
+                    }
+                    if (inputFile == null) {
+                        inputFile = args[i];
+                    } else {
+                        outputFile = args[i];
+                    }
+                }
             }
         }
         
     }
     
+    /**
+     * Validates the arguments after parsing.
+     * Throws an exception if the input file is missing or does not exist.
+     */
     private void validateArguments(){
         if (help) return;
         
@@ -52,6 +75,9 @@ public class Arguments
         }
     }
     
+    /**
+     * Displays help information on how to use the program.
+     */
     public void showHelp(){
         System.out.println("SINTAXIS: conectividad [-t][-h] [fichero entrada] [fichero salida]");
         System.out.println(" -t                Traza cada paso");
@@ -60,18 +86,22 @@ public class Arguments
         System.out.println(" [fichero salida]  Conexiones seleccionadas y coste total");        
     }
     
+    /** @return true if trace mode is enabled */
     public boolean isTraceEnabled() {
         return trace;
     }
 
+    /** @return true if help was requested */
     public boolean isHelpEnabled() {
         return help;
     }
-
+    
+    /** @return Input file name */
     public String getInputFile() {
         return inputFile;
     }
-
+    
+    /** @return Output file name */
     public String getOutputFile() {
         return outputFile;
     }

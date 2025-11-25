@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=MinimumSpanningTree
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MinimumSpanningTree\ here.\r\n\ \r\n\ @author\ Guillermo\ Bernal\ Lou\r\n\ @version\ 25/11/2025\r\n
+comment0.text=\r\n\ Result\ of\ a\ Minimum\ Spanning\ Tree\ calculation.\r\n\ Contains\ list\ of\ edges\ and\ total\ cost.\r\n\ \r\n\ @author\ Guillermo\ Bernal\ Lou\r\n\ @version\ 25/11/2025\r\n
 comment1.params=edges\ cost
 comment1.target=MinimumSpanningTree(java.util.List,\ int)
 comment2.params=
 comment2.target=java.util.List\ getEdges()
+comment2.text=@return\ the\ list\ of\ edges\ that\ form\ the\ MST
 comment3.params=
 comment3.target=int\ getCost()
+comment3.text=@return\ the\ total\ cost\ of\ the\ MST
 numComments=4

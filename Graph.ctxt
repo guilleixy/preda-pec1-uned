@@ -1,12 +1,14 @@
 #BlueJ class context
 comment0.target=Graph
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Graph\ here.\r\n\ \r\n\ @author\ Guillermo\ Bernal\ Lou\r\n\ @version\ 25/11/2025\r\n
+comment0.text=\r\n\ Represents\ undirected\ weighted\ graph\ using\ adjacency\ lists.\r\n\ Each\ node\ maintains\ a\ list\ of\ edges\ connecting\ it\ to\ neighboring\ nodes.\r\n\ \r\n\ @author\ Guillermo\ Bernal\ Lou\r\n\ @version\ 25/11/2025\r\n
 comment1.params=n
 comment1.target=Graph(int)
 comment2.params=originNode\ targetNode\ weight
 comment2.target=void\ addEdge(int,\ int,\ int)
+comment2.text=\r\n\ Adds\ an\ undirected\ edge\ between\ two\ nodes\ with\ a\ given\ weight.\r\n\ For\ undirected\ graphs,\ the\ edge\ is\ added\ to\ both\ nodes'\ adjacency\ lists.\r\n\ \r\n\ @param\ originNode\ Index\ of\ the\ origin\ node\r\n\ @param\ targetNode\ Index\ of\ the\ target\ node\r\n\ @param\ weight\ Weight\ or\ cost\ of\ the\ edge\r\n
 comment3.params=
 comment3.target=int\ getSize()
 comment4.params=u\ v
 comment4.target=boolean\ isConnected(int,\ int)
+comment4.text=\r\n\ Checks\ whether\ there\ is\ a\ direct\ edge\ between\ two\ nodes.\r\n\ \r\n\ @param\ u\ Index\ of\ the\ first\ node\r\n\ @param\ v\ Index\ of\ the\ second\ node\r\n\ @return\ True\ if\ an\ edge\ exists\ between\ u\ and\ v;\ false\ otherwise\r\n
 numComments=5

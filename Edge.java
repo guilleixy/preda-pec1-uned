@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Edge here.
+ * Represents an edge in a graph, connecting two nodes with a weight.
  * 
  * @author Guillermo Bernal Lou
  * @version 25/11/2025
