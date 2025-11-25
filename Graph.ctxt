@@ -1,8 +1,12 @@
 #BlueJ class context
 comment0.target=Graph
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Graph\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=n\ y
-comment1.target=Graph(int,\ int)
+comment1.params=n
+comment1.target=Graph(int)
 comment2.params=originNode\ targetNode\ weight
 comment2.target=void\ addEdge(int,\ int,\ int)
-numComments=3
+comment3.params=
+comment3.target=int\ getSize()
+comment4.params=u\ v
+comment4.target=boolean\ isConnected(int,\ int)
+numComments=5

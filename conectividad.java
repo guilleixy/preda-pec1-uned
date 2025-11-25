@@ -24,7 +24,7 @@ public class conectividad
             int n = Integer.parseInt(parts[0]);
             int y = Integer.parseInt(parts[1]);
 
-            Graph graph = new Graph(n, y);
+            Graph graph = new Graph(n);
             
             line = reader.readLine();
             
@@ -43,9 +43,6 @@ public class conectividad
             e.printStackTrace();
         }
         //TODO: Move FileRead to separate file?
-        
-        //createGraph();
-        //dos partes, primera linea y luego el arbol
         
         //createTree(trace);
     }

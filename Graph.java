@@ -10,12 +10,12 @@ import java.util.ArrayList;
 public class Graph
 {
     private int n;
-    private int y;
+    //private int y;
     private List<List<Edge>> adjacent;
     
-    public Graph(int n, int y) {
+    public Graph(int n) {
         this.n = n;
-        this.y = y;
+        //this.y = y;
         adjacent = new ArrayList<>();
         for(int i = 0; i < n; i++){
             adjacent.add(new ArrayList<>());      
@@ -26,4 +26,16 @@ public class Graph
         adjacent.get(originNode).add(new Edge(originNode, targetNode, weight));
         adjacent.get(targetNode).add(new Edge(targetNode, originNode, weight));
     }
+    
+    public int getSize(){
+        return n;
+    }
+    
+    public boolean isConnected(int u, int v) {
+        for (Edge e : adjacent.get(u)) {
+            if (e.getTargetNode() == v) return true;
+        }
+        return false;
+    }
+    
 }
