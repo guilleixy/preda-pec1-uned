@@ -52,4 +52,14 @@ public class Graph
         return false;
     }
     
+    /**
+     * Returns adjacent nodes to node .
+     * 
+     * @param u Index of the desired node
+     * @return List of the edges from a node
+     */
+    public List<Edge> getAdjacency(int u){
+        return adjacent.get(u);
+    }
+    
 }
