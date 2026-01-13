@@ -32,12 +32,12 @@ public class Prim
             for(int u = 0; u < n; u++){
                 if(!visited[u]) continue;
                 
-                  for (Edge e : g.getAdjacency(u)) {
-                    int v = e.getTargetNode();
+                for (int v = 0; v < n; v++) {
                     if (visited[v]) continue;
-    
+                    if (!g.isConnected(u, v)) continue;
+
                     int weight = (u * v) % y;
-    
+
                     if (bestEdge == null || weight < bestEdge.getWeight()) {
                         bestEdge = new Edge(u, v, weight);
                     }

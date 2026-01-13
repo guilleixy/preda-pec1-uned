@@ -17,7 +17,7 @@ public class Arguments
     private boolean trace = false;
     private boolean help = false;
     private String inputFile = null;
-    private String outputFile = "fallbackOutputFile.txt";
+    private String outputFile = null;
     
     public Arguments(String[] args) {
         parseArguments(args);

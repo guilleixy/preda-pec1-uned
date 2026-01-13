@@ -54,23 +54,29 @@ public class conectividad
             // Compute the MST using Prim's algorithm
             Prim primSolver = new Prim();
             MinimumSpanningTree mst = primSolver.calculateMSTree(graph, config.isTraceEnabled(), y);
-                    
-            // Write the MST cost and edges to the output file        
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter(config.getOutputFile()))) {
-                
-                bw.write(Integer.toString(mst.getCost()));
-                bw.newLine();
-                
-                // Write each edge in the MST (convert back to 1-based indexing for output)
-                for (Edge e : mst.getEdges()) {
-                    bw.write((e.getOriginNode() + 1) + " " + (e.getTargetNode() + 1) + " " + e.getWeight());
-                    bw.newLine();
-                }
-    
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
             
+            if(config.getOutputFile() != null){
+                // Write the MST cost and edges to the output file        
+                try (BufferedWriter bw = new BufferedWriter(new FileWriter(config.getOutputFile()))) {
+                    
+                    bw.write(Integer.toString(mst.getCost()));
+                    bw.newLine();
+                    
+                    // Write each edge in the MST (convert back to 1-based indexing for output)
+                    for (Edge e : mst.getEdges()) {
+                        bw.write((e.getOriginNode() + 1) + " " + (e.getTargetNode() + 1) + " " + e.getWeight());
+                        bw.newLine();
+                    }
+        
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }     
+            } else {
+                    for (Edge e : mst.getEdges()) {
+                        System.out.println((e.getOriginNode() + 1) + " " + (e.getTargetNode() + 1) + " " + e.getWeight());
+
+                    }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
